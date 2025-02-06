@@ -24,7 +24,12 @@ struct CardZorbi: View {
                             .font(.system(size: 24))
                             .foregroundColor(Color.bluePrimary)
                             .bold()
-                        Text("Idade: 2 anos")
+                        RoundedRectangle(cornerRadius: 3)
+                            .fill(Color.sageGray)
+                            .overlay{
+                                Text("Idade: 2 anos")
+                            }
+                            
                         Text("Comida favorita: Peixe")
                         Text("Proxima: 2024-01-01")
                         Button {
