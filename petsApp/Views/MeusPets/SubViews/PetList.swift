@@ -15,12 +15,7 @@ struct PetList: View {
                     .frame(height: 190)
                 CardZorbi()
                     .frame(height: 190)
-                CardZorbi()
-                    .frame(height: 190)
-                CardZorbi()
-                    .frame(height: 190)
-                CardZorbi()
-                    .frame(height: 190)
+                
             }
         }
     }

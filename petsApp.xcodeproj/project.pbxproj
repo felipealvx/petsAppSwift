@@ -15,6 +15,8 @@
 		34D6A2A72D554BA9008EB2B9 /* MeusPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A29B2D554BA9008EB2B9 /* MeusPetsView.swift */; };
 		34D6A2A82D554BA9008EB2B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A29F2D554BA9008EB2B9 /* ContentView.swift */; };
 		34D6A2A92D554BA9008EB2B9 /* petsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A2A02D554BA9008EB2B9 /* petsAppApp.swift */; };
+		8140EA662D5D766000EBA8B1 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140EA652D5D766000EBA8B1 /* Input.swift */; };
+		8140EA682D5D79BD00EBA8B1 /* ButtonAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		34D6A29E2D554BA9008EB2B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D6A29F2D554BA9008EB2B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		34D6A2A02D554BA9008EB2B9 /* petsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petsAppApp.swift; sourceTree = "<group>"; };
+		8140EA652D5D766000EBA8B1 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAdd.swift; sourceTree = "<group>"; };
 		81A326422D53F12A002060D3 /* petsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A326522D53F12B002060D3 /* petsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A3265C2D53F12B002060D3 /* petsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				34D6A2952D554BA9008EB2B9 /* Modal.swift */,
+				8140EA652D5D766000EBA8B1 /* Input.swift */,
+				8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -320,12 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8140EA662D5D766000EBA8B1 /* Input.swift in Sources */,
 				34D6A2A42D554BA9008EB2B9 /* Modal.swift in Sources */,
 				34D6A2A52D554BA9008EB2B9 /* PetCard.swift in Sources */,
 				34D6A2A62D554BA9008EB2B9 /* PetList.swift in Sources */,
 				34D6A2A72D554BA9008EB2B9 /* MeusPetsView.swift in Sources */,
 				34D6A2A82D554BA9008EB2B9 /* ContentView.swift in Sources */,
 				34D6A2A92D554BA9008EB2B9 /* petsAppApp.swift in Sources */,
+				8140EA682D5D79BD00EBA8B1 /* ButtonAdd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

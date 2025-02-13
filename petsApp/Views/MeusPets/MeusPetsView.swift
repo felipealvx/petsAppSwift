@@ -13,8 +13,14 @@ struct MeusPetsView: View {
             ZStack {
                 Color("Background")
                     .ignoresSafeArea()
-                PetList()
-                    .padding()
+                VStack(){
+                    Input()
+                    PetList()
+                        .padding()
+                    ButtonAdd()
+                        .padding()
+                }
+                
                     
             }
             .navigationTitle("Meus Pets")
