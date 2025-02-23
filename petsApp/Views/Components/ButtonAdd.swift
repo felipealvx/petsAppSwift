@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct ButtonAdd: View {
+    @State private var isSheetPresented: Bool = false
     var body: some View {
         Button {
-            //
+            isSheetPresented.toggle()
         } label: {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 16)
                 .fill(Color("BluePrimary"))
-                .frame(height: 50)
+                .frame(height: 52)
                 .overlay{
                     HStack(){
-                        Image(systemName: "plus.app.fill")
+                        Image(systemName: "plus")
                             .foregroundColor(Color.white)
                         Text("Adicionar Pet")
                             .foregroundColor(Color.white)
                     }
+                    .bold()
+                    .font(.system(size: 18))
                     
                 }
         }

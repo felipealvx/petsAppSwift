@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MeusPetsView: View {
+    
+    @State private var isSheetPresented = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -17,8 +20,37 @@ struct MeusPetsView: View {
                     Input()
                     PetList()
                         .padding()
-                    ButtonAdd()
-                        .padding()
+                    
+//                    ButtonAdd()
+//                        .padding()
+                    
+                    Button {
+                        isSheetPresented.toggle()
+                    } label: {
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(Color("BluePrimary"))
+                            .frame(height: 52)
+                            .overlay{
+                                HStack(){
+                                    Image(systemName: "plus")
+                                        .foregroundColor(Color.white)
+                                    Text("Adicionar Pet")
+                                        .foregroundColor(Color.white)
+                                }
+                                .bold()
+                                .font(.system(size: 18))
+                                
+                            }
+                    }
+                    .padding()
+                        .sheet(isPresented: $isSheetPresented) {
+                            PetList()
+//                                .presentationDetents([
+//                                    .fraction(0.3),
+//                                    .height(200)
+//                                ])
+                        }
+                        
                 }
                 
                     
