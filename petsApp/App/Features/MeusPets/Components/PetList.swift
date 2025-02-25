@@ -11,10 +11,8 @@ struct PetList: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 18) {
-                CardZorbi()
-                    .frame(height: 190)
-                CardZorbi()
-                    .frame(height: 190)
+                PetCardView(pet: Pet(nome: "Daniel", idade: 1, genero: "Macho", ultimaVacina: "22-01-25", proximaVacina: "26-06-25", nomeDaImage: "Cat"))
+                PetCardView(pet: Pet(nome: "Daniel", idade: 1, genero: "Macho", ultimaVacina: "22-01-25", proximaVacina: "26-06-25", nomeDaImage: "Cat"))
                 PetCardView(pet: Pet(nome: "Daniel", idade: 1, genero: "Macho", ultimaVacina: "22-01-25", proximaVacina: "26-06-25", nomeDaImage: "Cat"))
                 
             }

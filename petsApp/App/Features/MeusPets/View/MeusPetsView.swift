@@ -16,13 +16,13 @@ struct MeusPetsView: View {
             ZStack {
                 Color("Background")
                     .ignoresSafeArea()
-                VStack(){
-                    Input()
+                VStack {
+                    //                    Input()
                     PetList()
                         .padding()
                     
-//                    ButtonAdd()
-//                        .padding()
+                    //                    ButtonAdd()
+                    //                        .padding()
                     
                     Button {
                         isSheetPresented.toggle()
@@ -42,18 +42,18 @@ struct MeusPetsView: View {
                                 
                             }
                     }
-                    .padding()
-                        .sheet(isPresented: $isSheetPresented) {
-                            PetList()
-//                                .presentationDetents([
-//                                    .fraction(0.3),
-//                                    .height(200)
-//                                ])
-                        }
-                        
+                    .padding(.horizontal)
+                    .sheet(isPresented: $isSheetPresented) {
+                        AdicionarPet()
+                            .presentationDetents([
+                                .fraction(0.7),
+                                .height(600)
+                            ])
+                    }
+                    
                 }
                 
-                    
+                
             }
             .navigationTitle("Meus Pets")
             .navigationBarTitleDisplayMode(.automatic)

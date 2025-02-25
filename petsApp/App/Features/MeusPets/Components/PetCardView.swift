@@ -47,7 +47,7 @@ struct PetCardView: View {
             }
             .padding(8)
             Button {
-                // botao de detalhes
+                //colocar aqui um navigation linnk para os detalhe do pet, ai voce passa os detalhes do pet, pet: pet
             } label: {
                 HStack {
                     Text("Ver mais dados")
