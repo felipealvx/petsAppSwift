@@ -28,7 +28,7 @@ struct MeusPetsView: View {
                         isSheetPresented.toggle()
                     } label: {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color("BluePrimary"))
+                            .fill(Color.teal)
                             .frame(height: 52)
                             .overlay{
                                 HStack(){
@@ -42,7 +42,7 @@ struct MeusPetsView: View {
                                 
                             }
                     }
-                    .padding(.horizontal)
+                    .padding()
                     .sheet(isPresented: $isSheetPresented) {
                         AdicionarPet()
                             .presentationDetents([

@@ -14,7 +14,7 @@ struct ButtonAdd: View {
             isSheetPresented.toggle()
         } label: {
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color("BluePrimary"))
+                .fill(Color.teal)
                 .frame(height: 52)
                 .overlay{
                     HStack(){
