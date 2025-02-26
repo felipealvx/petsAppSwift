@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		34D6A2A22D554BA9008EB2B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D6A2992D554BA9008EB2B9 /* Preview Assets.xcassets */; };
 		34D6A2A32D554BA9008EB2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D6A29E2D554BA9008EB2B9 /* Assets.xcassets */; };
-		34D6A2A42D554BA9008EB2B9 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A2952D554BA9008EB2B9 /* Modal.swift */; };
 		34D6A2A52D554BA9008EB2B9 /* PetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A2962D554BA9008EB2B9 /* PetCard.swift */; };
 		34D6A2A62D554BA9008EB2B9 /* PetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A2972D554BA9008EB2B9 /* PetList.swift */; };
 		34D6A2A72D554BA9008EB2B9 /* MeusPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A29B2D554BA9008EB2B9 /* MeusPetsView.swift */; };
-		34D6A2A82D554BA9008EB2B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A29F2D554BA9008EB2B9 /* ContentView.swift */; };
 		34D6A2A92D554BA9008EB2B9 /* petsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A2A02D554BA9008EB2B9 /* petsAppApp.swift */; };
 		4C214BAC2D5FD6CD00F019B0 /* PetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C214BAB2D5FD6CD00F019B0 /* PetCardView.swift */; };
 		4C214BAD2D5FD7AB00F019B0 /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C214BA82D5FD60A00F019B0 /* PetModel.swift */; };
+		4C7CA82B2D6D2C5A00E56258 /* AdicionarPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CA82A2D6D2C5A00E56258 /* AdicionarPet.swift */; };
+		4C7CA82E2D6D2D2D00E56258 /* DetalhesDoPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CA82D2D6D2D2D00E56258 /* DetalhesDoPet.swift */; };
 		8140EA662D5D766000EBA8B1 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140EA652D5D766000EBA8B1 /* Input.swift */; };
 		8140EA682D5D79BD00EBA8B1 /* ButtonAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */; };
 /* End PBXBuildFile section */
@@ -39,16 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34D6A2952D554BA9008EB2B9 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		34D6A2962D554BA9008EB2B9 /* PetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCard.swift; sourceTree = "<group>"; };
 		34D6A2972D554BA9008EB2B9 /* PetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetList.swift; sourceTree = "<group>"; };
 		34D6A2992D554BA9008EB2B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34D6A29B2D554BA9008EB2B9 /* MeusPetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusPetsView.swift; sourceTree = "<group>"; };
 		34D6A29E2D554BA9008EB2B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		34D6A29F2D554BA9008EB2B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		34D6A2A02D554BA9008EB2B9 /* petsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petsAppApp.swift; sourceTree = "<group>"; };
 		4C214BA82D5FD60A00F019B0 /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
 		4C214BAB2D5FD6CD00F019B0 /* PetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCardView.swift; sourceTree = "<group>"; };
+		4C7CA82A2D6D2C5A00E56258 /* AdicionarPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarPet.swift; sourceTree = "<group>"; };
+		4C7CA82D2D6D2D2D00E56258 /* DetalhesDoPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesDoPet.swift; sourceTree = "<group>"; };
 		8140EA652D5D766000EBA8B1 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAdd.swift; sourceTree = "<group>"; };
 		81A326422D53F12A002060D3 /* petsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,16 +94,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34D6A2982D554BA9008EB2B9 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				34D6A2952D554BA9008EB2B9 /* Modal.swift */,
-				8140EA652D5D766000EBA8B1 /* Input.swift */,
-				8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		34D6A29A2D554BA9008EB2B9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +105,9 @@
 		34D6A29C2D554BA9008EB2B9 /* MeusPets */ = {
 			isa = PBXGroup;
 			children = (
-				34D6A2AD2D554C37008EB2B9 /* SubViews */,
-				34D6A29B2D554BA9008EB2B9 /* MeusPetsView.swift */,
+				4C7CA8272D6D2A9B00E56258 /* Model */,
+				4C7CA8262D6D29D900E56258 /* View */,
+				34D6A2AD2D554C37008EB2B9 /* Components */,
 			);
 			path = MeusPets;
 			sourceTree = "<group>";
@@ -124,59 +115,70 @@
 		34D6A2A12D554BA9008EB2B9 /* petsApp */ = {
 			isa = PBXGroup;
 			children = (
-				34D6A2AB2D554BC5008EB2B9 /* Models */,
-				34D6A2AA2D554BC0008EB2B9 /* Views */,
-				34D6A2AC2D554BCC008EB2B9 /* ViewModels */,
+				4C7CA8282D6D2AD700E56258 /* Helpers */,
+				4C7CA8242D6D292D00E56258 /* Resources */,
+				4C7CA8212D6D28F300E56258 /* App */,
 				34D6A29A2D554BA9008EB2B9 /* Preview Content */,
-				34D6A29E2D554BA9008EB2B9 /* Assets.xcassets */,
-				34D6A29F2D554BA9008EB2B9 /* ContentView.swift */,
 				34D6A2A02D554BA9008EB2B9 /* petsAppApp.swift */,
 			);
 			path = petsApp;
 			sourceTree = "<group>";
 		};
-		34D6A2AA2D554BC0008EB2B9 /* Views */ = {
+		34D6A2AD2D554C37008EB2B9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				34D6A2982D554BA9008EB2B9 /* Components */,
-				34D6A29C2D554BA9008EB2B9 /* MeusPets */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		34D6A2AB2D554BC5008EB2B9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		34D6A2AC2D554BCC008EB2B9 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		34D6A2AD2D554C37008EB2B9 /* SubViews */ = {
-			isa = PBXGroup;
-			children = (
+				4C214BAB2D5FD6CD00F019B0 /* PetCardView.swift */,
 				34D6A2962D554BA9008EB2B9 /* PetCard.swift */,
 				34D6A2972D554BA9008EB2B9 /* PetList.swift */,
+				8140EA652D5D766000EBA8B1 /* Input.swift */,
+				8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */,
 			);
-			path = SubViews;
+			path = Components;
 			sourceTree = "<group>";
 		};
-		4C214BA72D5FD60100F019B0 /* Pets */ = {
+		4C7CA8212D6D28F300E56258 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				4C214BA92D5FD69900F019B0 /* Model */,
-				4C214BAA2D5FD6A300F019B0 /* View */,
+				4C7CA8222D6D28FB00E56258 /* Features */,
 			);
-			path = Pets;
+			path = App;
 			sourceTree = "<group>";
 		};
-		4C214BA92D5FD69900F019B0 /* Model */ = {
+		4C7CA8222D6D28FB00E56258 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CA82C2D6D2D1E00E56258 /* Detalhes do Pet */,
+				4C7CA8292D6D2C4700E56258 /* Adicionar Pet */,
+				34D6A29C2D554BA9008EB2B9 /* MeusPets */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4C7CA8242D6D292D00E56258 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CA8252D6D293500E56258 /* Fonts */,
+				34D6A29E2D554BA9008EB2B9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C7CA8252D6D293500E56258 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4C7CA8262D6D29D900E56258 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34D6A29B2D554BA9008EB2B9 /* MeusPetsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C7CA8272D6D2A9B00E56258 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				4C214BA82D5FD60A00F019B0 /* PetModel.swift */,
@@ -184,12 +186,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4C214BAA2D5FD6A300F019B0 /* View */ = {
+		4C7CA8282D6D2AD700E56258 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				4C214BAB2D5FD6CD00F019B0 /* PetCardView.swift */,
 			);
-			path = View;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4C7CA8292D6D2C4700E56258 /* Adicionar Pet */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CA82A2D6D2C5A00E56258 /* AdicionarPet.swift */,
+			);
+			path = "Adicionar Pet";
+			sourceTree = "<group>";
+		};
+		4C7CA82C2D6D2D1E00E56258 /* Detalhes do Pet */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CA82D2D6D2D2D00E56258 /* DetalhesDoPet.swift */,
+			);
+			path = "Detalhes do Pet";
 			sourceTree = "<group>";
 		};
 		81A326392D53F12A002060D3 = {
@@ -199,7 +216,6 @@
 				81A326552D53F12B002060D3 /* petsAppTests */,
 				81A3265F2D53F12B002060D3 /* petsAppUITests */,
 				81A326432D53F12A002060D3 /* Products */,
-				4C214BA72D5FD60100F019B0 /* Pets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -356,14 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7CA82E2D6D2D2D00E56258 /* DetalhesDoPet.swift in Sources */,
 				4C214BAD2D5FD7AB00F019B0 /* PetModel.swift in Sources */,
 				8140EA662D5D766000EBA8B1 /* Input.swift in Sources */,
+				4C7CA82B2D6D2C5A00E56258 /* AdicionarPet.swift in Sources */,
 				4C214BAC2D5FD6CD00F019B0 /* PetCardView.swift in Sources */,
-				34D6A2A42D554BA9008EB2B9 /* Modal.swift in Sources */,
 				34D6A2A52D554BA9008EB2B9 /* PetCard.swift in Sources */,
 				34D6A2A62D554BA9008EB2B9 /* PetList.swift in Sources */,
 				34D6A2A72D554BA9008EB2B9 /* MeusPetsView.swift in Sources */,
-				34D6A2A82D554BA9008EB2B9 /* ContentView.swift in Sources */,
 				34D6A2A92D554BA9008EB2B9 /* petsAppApp.swift in Sources */,
 				8140EA682D5D79BD00EBA8B1 /* ButtonAdd.swift in Sources */,
 			);
