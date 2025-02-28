@@ -20,11 +20,13 @@ struct ButtonAdd: View {
                     HStack(){
                         Image(systemName: "plus")
                             .foregroundColor(Color.white)
+                        Spacer()
                         Text("Adicionar Pet")
                             .foregroundColor(Color.white)
                     }
                     .bold()
                     .font(.system(size: 18))
+                    .padding()
                     
                 }
         }
