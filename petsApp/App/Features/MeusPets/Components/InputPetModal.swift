@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InputPetModal: View {
     
-    @State private var petName: String = ""
+    @Binding var inputValue: String
     
     let input: InputPet
     
@@ -17,7 +17,7 @@ struct InputPetModal: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(input.labelInput)
                 .foregroundColor(.black)
-            TextField(input.placeholderInput, text: $petName)
+            TextField(input.placeholderInput, text: $inputValue)
                 .padding()
                 .background(Color(.systemGray6))
                 .cornerRadius(16)
@@ -30,5 +30,5 @@ struct InputPetModal: View {
 }
 
 #Preview {
-    // InputPetModal()
+    InputPetModal(inputValue: .constant(""), input: .init(placeholderInput: "Placeholder", labelInput: "Label"))
 }

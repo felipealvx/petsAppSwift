@@ -9,10 +9,13 @@ import SwiftUI
 import PhotosUI
 
 struct AdicionarPet: View {
+    @Binding var pets: [Pet]
+    @Binding var isSheetPresented: Bool
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImage: UIImage? = nil
-    
     @State private var petName: String = ""
+    @State private var idade: String = ""
+    @State private var favoriteFood: String = ""
     var body: some View {
         VStack (spacing: 10) {
             VStack(alignment: .leading) {
@@ -45,12 +48,13 @@ struct AdicionarPet: View {
                 }
             }
             
-            InputPetModal(input: InputPet(placeholderInput: "Nome do pet...", labelInput: "Nome"))
-            InputPetModal(input: InputPet(placeholderInput: "Idade do pet...", labelInput: "Idade"))
-            InputPetModal(input: InputPet(placeholderInput: "Comida favorita do pet...", labelInput: "Comida Favorita"))
+            InputPetModal(inputValue: $petName, input: InputPet(placeholderInput: "Nome do pet...", labelInput: "Nome"))
+            InputPetModal(inputValue: $idade, input: InputPet(placeholderInput: "Idade do pet...", labelInput: "Idade"))
+            InputPetModal(inputValue: $favoriteFood, input: InputPet(placeholderInput: "Comida favorita do pet...", labelInput: "Comida Favorita"))
             
             Button {
-                
+                pets.append(Pet(nome: petName, idade: Int(idade) ?? 0, genero: "Nao Consta", ultimaVacina: "Nao Consta", proximaVacina: "Nao consta", nomeDaImage: "Nao Consta"))
+                isSheetPresented.toggle()
             } label: {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(Color.teal)
@@ -75,5 +79,5 @@ struct AdicionarPet: View {
 }
 
 #Preview {
-    AdicionarPet()
+    AdicionarPet(pets: .constant([]), isSheetPresented: .constant(true))
 }

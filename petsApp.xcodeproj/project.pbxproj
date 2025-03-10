@@ -15,7 +15,7 @@
 		4C214BAC2D5FD6CD00F019B0 /* PetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C214BAB2D5FD6CD00F019B0 /* PetCardView.swift */; };
 		4C214BAD2D5FD7AB00F019B0 /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C214BA82D5FD60A00F019B0 /* PetModel.swift */; };
 		4C7CA82B2D6D2C5A00E56258 /* AdicionarPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CA82A2D6D2C5A00E56258 /* AdicionarPet.swift */; };
-		4C7CA82E2D6D2D2D00E56258 /* DetalhesDoPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CA82D2D6D2D2D00E56258 /* DetalhesDoPet.swift */; };
+		4C7CA82E2D6D2D2D00E56258 /* Detalhes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CA82D2D6D2D2D00E56258 /* Detalhes.swift */; };
 		8140EA682D5D79BD00EBA8B1 /* ButtonAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */; };
 		81FCC0D42D6FC9BD00B6DCBD /* InputPetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC0D32D6FC9BD00B6DCBD /* InputPetModal.swift */; };
 		81FCC0D62D6FCE7A00B6DCBD /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC0D52D6FCE7500B6DCBD /* InputModel.swift */; };
@@ -47,7 +47,7 @@
 		4C214BA82D5FD60A00F019B0 /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
 		4C214BAB2D5FD6CD00F019B0 /* PetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCardView.swift; sourceTree = "<group>"; };
 		4C7CA82A2D6D2C5A00E56258 /* AdicionarPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarPet.swift; sourceTree = "<group>"; };
-		4C7CA82D2D6D2D2D00E56258 /* DetalhesDoPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesDoPet.swift; sourceTree = "<group>"; };
+		4C7CA82D2D6D2D2D00E56258 /* Detalhes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detalhes.swift; sourceTree = "<group>"; };
 		8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAdd.swift; sourceTree = "<group>"; };
 		81A326422D53F12A002060D3 /* petsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A326522D53F12B002060D3 /* petsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +115,6 @@
 		34D6A2A12D554BA9008EB2B9 /* petsApp */ = {
 			isa = PBXGroup;
 			children = (
-				4C7CA8282D6D2AD700E56258 /* Helpers */,
 				4C7CA8242D6D292D00E56258 /* Resources */,
 				4C7CA8212D6D28F300E56258 /* App */,
 				34D6A29A2D554BA9008EB2B9 /* Preview Content */,
@@ -186,13 +185,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4C7CA8282D6D2AD700E56258 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		4C7CA8292D6D2C4700E56258 /* Adicionar Pet */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +196,7 @@
 		4C7CA82C2D6D2D1E00E56258 /* Detalhes do Pet */ = {
 			isa = PBXGroup;
 			children = (
-				4C7CA82D2D6D2D2D00E56258 /* DetalhesDoPet.swift */,
+				4C7CA82D2D6D2D2D00E56258 /* Detalhes.swift */,
 			);
 			path = "Detalhes do Pet";
 			sourceTree = "<group>";
@@ -372,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C7CA82E2D6D2D2D00E56258 /* DetalhesDoPet.swift in Sources */,
+				4C7CA82E2D6D2D2D00E56258 /* Detalhes.swift in Sources */,
 				4C214BAD2D5FD7AB00F019B0 /* PetModel.swift in Sources */,
 				4C7CA82B2D6D2C5A00E56258 /* AdicionarPet.swift in Sources */,
 				4C214BAC2D5FD6CD00F019B0 /* PetCardView.swift in Sources */,

@@ -46,8 +46,8 @@ struct PetCardView: View {
                 }
             }
             .padding(8)
-            Button {
-                //colocar aqui um navigation linnk para os detalhe do pet, ai voce passa os detalhes do pet, pet: pet
+            NavigationLink {
+                DetalhesDoPet(pet: pet)
             } label: {
                 HStack {
                     Text("Ver mais dados")
@@ -58,18 +58,42 @@ struct PetCardView: View {
                 .bold()
                 .frame(maxWidth: .infinity)
                 .background(.teal)
-                    .clipShape(
-                        UnevenRoundedRectangle(
-                            cornerRadii: .init(
-                                topLeading: 0,
-                                bottomLeading: 10,
-                                bottomTrailing: 10,
-                                topTrailing: 0
-                            )
+                .clipShape(
+                    UnevenRoundedRectangle(
+                        cornerRadii: .init(
+                            topLeading: 0,
+                            bottomLeading: 10,
+                            bottomTrailing: 10,
+                            topTrailing: 0
                         )
                     )
+                )
             }
-
+            
+            //            Button {
+            //                //colocar aqui um navigation linnk para os detalhe do pet, ai voce passa os detalhes do pet, pet: pet
+            //            } label: {
+            //                HStack {
+            //                    Text("Ver mais dados")
+            //                        .padding()
+            //                    Image(systemName: "chevron.right")
+            //                }
+            //                .foregroundStyle(.white)
+            //                .bold()
+            //                .frame(maxWidth: .infinity)
+            //                .background(.teal)
+            //                    .clipShape(
+            //                        UnevenRoundedRectangle(
+            //                            cornerRadii: .init(
+            //                                topLeading: 0,
+            //                                bottomLeading: 10,
+            //                                bottomTrailing: 10,
+            //                                topTrailing: 0
+            //                            )
+            //                        )
+            //                    )
+            //            }
+            
         }
         .padding(.top, 10)
         .background(.white)
@@ -80,7 +104,7 @@ struct PetCardView: View {
         HStack {
             Text(leftText)
                 .bold()
-                Spacer()
+            Spacer()
             Text(rightText)
                 .fontWeight(.light)
         }
@@ -89,7 +113,9 @@ struct PetCardView: View {
 }
 
 #Preview {
-    PetCardView(pet: Pet(
+    NavigationStack {
+        
+        PetCardView(pet: Pet(
             nome: "ZORBI",
             idade: 2,
             genero: "Male",
@@ -98,4 +124,5 @@ struct PetCardView: View {
             nomeDaImage: "Cat"
         ))
         .padding()
+    }
 }
