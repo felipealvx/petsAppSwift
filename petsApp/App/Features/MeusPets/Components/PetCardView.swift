@@ -117,8 +117,9 @@ struct PetCardView: View {
         
         PetCardView(pet: Pet(
             nome: "ZORBI",
-            idade: 2,
+            idade: "2",
             genero: "Male",
+            favoriteFood: "Peixe",
             ultimaVacina: "22-05-25",
             proximaVacina: "22-05-25",
             nomeDaImage: "Cat"

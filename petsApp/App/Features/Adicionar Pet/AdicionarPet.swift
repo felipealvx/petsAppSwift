@@ -53,7 +53,7 @@ struct AdicionarPet: View {
             InputPetModal(inputValue: $favoriteFood, input: InputPet(placeholderInput: "Comida favorita do pet...", labelInput: "Comida Favorita"))
             
             Button {
-                pets.append(Pet(nome: petName, idade: Int(idade) ?? 0, genero: "Nao Consta", ultimaVacina: "Nao Consta", proximaVacina: "Nao consta", nomeDaImage: "Nao Consta"))
+                pets.append(Pet(nome: petName, idade: idade, genero: "Nao Consta", favoriteFood: favoriteFood, ultimaVacina: "Nao Consta", proximaVacina: "Nao consta", nomeDaImage: "Nao Consta"))
                 isSheetPresented.toggle()
             } label: {
                 RoundedRectangle(cornerRadius: 16)

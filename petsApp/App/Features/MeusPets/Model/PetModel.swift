@@ -10,8 +10,9 @@ import Foundation
 struct Pet: Identifiable {
     let id = UUID()
     let nome: String
-    let idade: Int
+    let idade: String
     let genero: String
+    let favoriteFood: String
     let ultimaVacina: String
     let proximaVacina: String
     let nomeDaImage: String
