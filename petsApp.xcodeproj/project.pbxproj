@@ -19,6 +19,7 @@
 		8140EA682D5D79BD00EBA8B1 /* ButtonAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140EA672D5D79BD00EBA8B1 /* ButtonAdd.swift */; };
 		81FCC0D42D6FC9BD00B6DCBD /* InputPetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC0D32D6FC9BD00B6DCBD /* InputPetModal.swift */; };
 		81FCC0D62D6FCE7A00B6DCBD /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC0D52D6FCE7500B6DCBD /* InputModel.swift */; };
+		81FCC1342D811EC400B6DCBD /* Lembretes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC1332D811EC400B6DCBD /* Lembretes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		81A3265C2D53F12B002060D3 /* petsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FCC0D32D6FC9BD00B6DCBD /* InputPetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPetModal.swift; sourceTree = "<group>"; };
 		81FCC0D52D6FCE7500B6DCBD /* InputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModel.swift; sourceTree = "<group>"; };
+		81FCC1332D811EC400B6DCBD /* Lembretes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lembretes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				4C7CA82D2D6D2D2D00E56258 /* Detalhes.swift */,
+				81FCC1332D811EC400B6DCBD /* Lembretes.swift */,
 			);
 			path = "Detalhes do Pet";
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C7CA82E2D6D2D2D00E56258 /* Detalhes.swift in Sources */,
+				81FCC1342D811EC400B6DCBD /* Lembretes.swift in Sources */,
 				4C214BAD2D5FD7AB00F019B0 /* PetModel.swift in Sources */,
 				4C7CA82B2D6D2C5A00E56258 /* AdicionarPet.swift in Sources */,
 				4C214BAC2D5FD6CD00F019B0 /* PetCardView.swift in Sources */,

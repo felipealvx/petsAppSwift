@@ -13,9 +13,9 @@ struct Pet: Identifiable {
     let idade: String
     let genero: String
     let favoriteFood: String
-    let ultimaVacina: String
-    let proximaVacina: String
-    let nomeDaImage: String
+    let ultimaVacina: Date
+    let proximaVacina: Date
+    let imagemData: Data?
     
     var simboloDeGenero: String {
         return genero == "Macho" ? "🐾" : "🐰"

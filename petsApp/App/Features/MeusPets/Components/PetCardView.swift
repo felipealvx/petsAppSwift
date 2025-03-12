@@ -10,15 +10,32 @@ import SwiftUI
 struct PetCardView: View {
     let pet: Pet
     
+    @State private var ultimaVacina: Date
+    @State private var proxVacina: Date
+    
+    init(pet: Pet) {
+        self.pet = pet
+        _ultimaVacina = State(initialValue: pet.ultimaVacina)
+        _proxVacina = State(initialValue: pet.proximaVacina)
+    }
+    
     var body: some View {
         
         VStack {
             HStack {
-                Image(pet.nomeDaImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 115, height: 115)
-                    .clipShape(Circle())
+                if let imageData = pet.imagemData, let uiImage = UIImage(data: imageData){
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 120)
+                        .clipShape(Circle())
+                } else {
+                    Image(systemName: "Foto")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 120)
+                        .clipShape(Circle())
+                }
                 
                 VStack(alignment: .leading, spacing: 5) {
                     HStack {
@@ -31,10 +48,10 @@ struct PetCardView: View {
                             .bold()
                     }
                     VStack(alignment: .leading) {
-                        textInline(leftText: "Última Vacina:", rightText: pet.proximaVacina)
+                        textInline(leftText: "Última Vacina:", rightText: dataFormatada(ultimaVacina))
                             .padding(5)
                         Divider()
-                        textInline(leftText: "Próxima Vacina:", rightText: pet.proximaVacina)
+                        textInline(leftText: "Próxima Vacina:", rightText: dataFormatada(proxVacina))
                             .padding(5)
                     }
                     .frame(maxWidth: .infinity)
@@ -47,7 +64,7 @@ struct PetCardView: View {
             }
             .padding(8)
             NavigationLink {
-                DetalhesDoPet(pet: pet)
+                DetalhesDoPet(pet: pet, ultimaVacina: $ultimaVacina, proxVacina: $proxVacina)
             } label: {
                 HStack {
                     Text("Ver mais dados")
@@ -70,29 +87,6 @@ struct PetCardView: View {
                 )
             }
             
-            //            Button {
-            //                //colocar aqui um navigation linnk para os detalhe do pet, ai voce passa os detalhes do pet, pet: pet
-            //            } label: {
-            //                HStack {
-            //                    Text("Ver mais dados")
-            //                        .padding()
-            //                    Image(systemName: "chevron.right")
-            //                }
-            //                .foregroundStyle(.white)
-            //                .bold()
-            //                .frame(maxWidth: .infinity)
-            //                .background(.teal)
-            //                    .clipShape(
-            //                        UnevenRoundedRectangle(
-            //                            cornerRadii: .init(
-            //                                topLeading: 0,
-            //                                bottomLeading: 10,
-            //                                bottomTrailing: 10,
-            //                                topTrailing: 0
-            //                            )
-            //                        )
-            //                    )
-            //            }
             
         }
         .padding(.top, 10)
@@ -110,6 +104,12 @@ struct PetCardView: View {
         }
         .font(.system(size: 14))
     }
+    
+    private func dataFormatada(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
 }
 
 #Preview {
@@ -120,9 +120,9 @@ struct PetCardView: View {
             idade: "2",
             genero: "Male",
             favoriteFood: "Peixe",
-            ultimaVacina: "22-05-25",
-            proximaVacina: "22-05-25",
-            nomeDaImage: "Cat"
+            ultimaVacina: Date(),
+            proximaVacina: Date(),
+            imagemData: UIImage(named: "Cat")?.jpegData(compressionQuality: 0.8)
         ))
         .padding()
     }

@@ -11,8 +11,11 @@ struct DetalhesDoPet: View {
     
     var pet: Pet
     
-    @State private var dataSelecionada = Date()
-    @State private var mostrarSeletorData = false
+    @Binding var ultimaVacina: Date
+    @Binding var proxVacina: Date
+    @State private var mostrarSeletorUltiVacina = false
+    @State private var mostrarSeletorProxVacina = false
+    @State private var mostrarLembrete = true
     
     var body: some View {
         // Text("Detalhes do Pet: \(pet.nome)")
@@ -22,11 +25,18 @@ struct DetalhesDoPet: View {
                 .ignoresSafeArea()
             VStack {
                 HStack(spacing: 20){
-                    Image("Cat")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 125, height: 170)
-                        .cornerRadius(4)
+                    if let imageData = pet.imagemData, let uiImage = UIImage(data: imageData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                    } else {
+                        Image(systemName: "photo")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(.gray)
+                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                    }
                     VStack(spacing: 10) {
                         Text(pet.nome)
                             .font(.title)
@@ -47,7 +57,7 @@ struct DetalhesDoPet: View {
                             .padding(5)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .background(Color.white)
-                            .cornerRadius(10)
+                            .cornerRadius(13)
                             
                             VStack {
                                 HStack {
@@ -63,48 +73,53 @@ struct DetalhesDoPet: View {
                             .padding(5)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .background(Color.white)
-                            .cornerRadius(10)
+                            .cornerRadius(13)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .frame(maxHeight: 170)
-                .background(Color.yellow)
+                
+                // fim card de cima com as informações do pet
                 
                 VStack {
-                    Text("Vacinaçao")
-                        .font(.title3)
+                    HStack {
+                        Text("Vacinaçao")
+                            .font(.title3)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 20)
+                    
                     VStack {
                         HStack {
                             Text("Ultima Vacinaçao:")
                             Spacer()
                             Button(action: {
-                                mostrarSeletorData.toggle()
+                                mostrarSeletorUltiVacina.toggle()
                             }) {
                                 HStack {
-                                    Text("\(dataFormatada(dataSelecionada))")
+                                    Text("\(dataFormatada(ultimaVacina))")
                                         .bold()
                                         .font(.title2)
                                         .foregroundStyle(Color.white)
                                 }
                                 .padding(5)
                                 //.frame(maxWidth: .infinity)
-                                .background(Color.danger)
+                                .background(Color.teal)
                                 .cornerRadius(8)
                             }
-                            .sheet(isPresented: $mostrarSeletorData) {
+                            .sheet(isPresented: $mostrarSeletorUltiVacina) {
                                 VStack {
-                                    DatePicker("Escolha uma data", selection: $dataSelecionada, displayedComponents: .date)
+                                    DatePicker("Escolha uma data", selection: $ultimaVacina, displayedComponents: .date)
                                         .datePickerStyle(GraphicalDatePickerStyle())
                                         .padding()
                                     Button("Fechar") {
-                                        mostrarSeletorData = false
+                                        mostrarSeletorUltiVacina = false
                                     }
                                     .padding()
                                 }
                             }
                         }
-                        padding(.horizontal)
                         
                         Divider()
                         
@@ -112,10 +127,10 @@ struct DetalhesDoPet: View {
                             Text("Próxima Vacinacao:")
                             Spacer()
                             Button(action: {
-                                mostrarSeletorData.toggle()
+                                mostrarSeletorProxVacina.toggle()
                             }) {
                                 HStack {
-                                    Text("\(dataFormatada(dataSelecionada))")
+                                    Text("\(dataFormatada(proxVacina))")
                                         .bold()
                                         .font(.title2)
                                         .foregroundStyle(Color.white)
@@ -125,21 +140,28 @@ struct DetalhesDoPet: View {
                                 .background(Color.danger)
                                 .cornerRadius(8)
                             }
-                            .sheet(isPresented: $mostrarSeletorData) {
+                            .sheet(isPresented: $mostrarSeletorProxVacina) {
                                 VStack {
-                                    DatePicker("Escolha uma data", selection: $dataSelecionada, displayedComponents: .date)
+                                    DatePicker("Escolha uma data", selection: $proxVacina, displayedComponents: .date)
                                         .datePickerStyle(GraphicalDatePickerStyle())
                                         .padding()
                                     Button("Fechar") {
-                                        mostrarSeletorData = false
+                                        mostrarSeletorProxVacina = false
                                     }
                                     .padding()
                                 }
                             }
                         }
+                        Divider()
+                        HStack {
+                            Toggle("Lembrete:", isOn: $mostrarLembrete)
+                                .toggleStyle(SwitchToggleStyle(tint: .teal))
+                        }
                     // aqui termina a vstack das datas (abaixo)
                     }
+                    .padding()
                     .background(Color.white)
+                    .cornerRadius(13)
                 }
             }
             .padding()
@@ -157,5 +179,17 @@ struct DetalhesDoPet: View {
 
 
 #Preview {
-    DetalhesDoPet(pet: Pet(nome: "TIQUINHO", idade: "3", genero: "Sim", favoriteFood: "Peixe", ultimaVacina: "Nao consta", proximaVacina: "Nao consta", nomeDaImage: "Nao consta"))
+    DetalhesDoPet(
+        pet: Pet(
+            nome: "Zorbi",
+            idade: "3",
+            genero: "Masc",
+            favoriteFood: "Peixe",
+            ultimaVacina: Date(),
+            proximaVacina: Date(),
+            imagemData: UIImage(named: "Cat")?.jpegData(compressionQuality: 0.8)
+        ),
+        ultimaVacina: .constant(Date()),
+        proxVacina: .constant(Date())
+    )
 }

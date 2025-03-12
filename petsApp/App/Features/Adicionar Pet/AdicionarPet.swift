@@ -53,7 +53,8 @@ struct AdicionarPet: View {
             InputPetModal(inputValue: $favoriteFood, input: InputPet(placeholderInput: "Comida favorita do pet...", labelInput: "Comida Favorita"))
             
             Button {
-                pets.append(Pet(nome: petName, idade: idade, genero: "Nao Consta", favoriteFood: favoriteFood, ultimaVacina: "Nao Consta", proximaVacina: "Nao consta", nomeDaImage: "Nao Consta"))
+                let imagemData = selectedImage?.jpegData(compressionQuality: 0.8)
+                pets.append(Pet(nome: petName, idade: idade, genero: "Nao Consta", favoriteFood: favoriteFood, ultimaVacina: Date(), proximaVacina: Date(), imagemData: imagemData))
                 isSheetPresented.toggle()
             } label: {
                 RoundedRectangle(cornerRadius: 16)
