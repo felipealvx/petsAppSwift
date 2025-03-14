@@ -20,6 +20,7 @@
 		81FCC0D42D6FC9BD00B6DCBD /* InputPetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC0D32D6FC9BD00B6DCBD /* InputPetModal.swift */; };
 		81FCC0D62D6FCE7A00B6DCBD /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC0D52D6FCE7500B6DCBD /* InputModel.swift */; };
 		81FCC1342D811EC400B6DCBD /* Lembretes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCC1332D811EC400B6DCBD /* Lembretes.swift */; };
+		81FCC13D2D84E51000B6DCBD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81FCC13C2D84E50500B6DCBD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		81FCC0D32D6FC9BD00B6DCBD /* InputPetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPetModal.swift; sourceTree = "<group>"; };
 		81FCC0D52D6FCE7500B6DCBD /* InputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModel.swift; sourceTree = "<group>"; };
 		81FCC1332D811EC400B6DCBD /* Lembretes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lembretes.swift; sourceTree = "<group>"; };
+		81FCC13C2D84E50500B6DCBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -207,6 +209,7 @@
 		81A326392D53F12A002060D3 = {
 			isa = PBXGroup;
 			children = (
+				81FCC13C2D84E50500B6DCBD /* README.md */,
 				34D6A2A12D554BA9008EB2B9 /* petsApp */,
 				81A326552D53F12B002060D3 /* petsAppTests */,
 				81A3265F2D53F12B002060D3 /* petsAppUITests */,
@@ -350,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81FCC13D2D84E51000B6DCBD /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
